@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+        <link rel="stylesheet" href="src/styles.css" />
+        <script
+            src="https://kit.fontawesome.com/a1b50df935.js"
+            crossorigin="anonymous"
+        ></script>
+        <title>Weather</title>
+    </head>
+    <body>
+        <img src="background2.jpeg" class="background" />
+        <div class="container">
+            <div class="headeer">
+                <div class="tolbar">
+                    <div class="menu" onclick="menu(this)">
+                        <div class="bar1"></div>
+                        <div class="bar2"></div>
+                        <div class="bar3"></div>
+                    </div>
+                    <div class="search-box">
+                        <button
+                            type="submit"
+                            class="btn-search"
+                            id="searchButton"
+                        >
+                            <i class="fas fa-search"></i>
+                        </button>
+                        <input
+                            type="text"
+                            class="input-search"
+                            id="inputSearch"
+                            placeholder="Search city..."
+                        />
+                    </div>
+                </div>
+                <div class="current-city">
+                    <div class="city">
+                        <h1 class="display-city">
+                            <span class="city" id="cityName">Lviv</span>
+                            <i
+                                class="fa-solid fa-location-dot"
+                                style="color: #333333"
+                            ></i>
+                        </h1>
+                    </div>
+                    <p class="time" id="time"></p>
+                </div>
+            </div>
+
+            <div class="main">
+                <p class="weather-text">Foggy</p>
+                <h2 class="current-temp">14°C</h2>
+                <p class="description">
+                    <span class="feels-like"> Feels like: 18°</span>
+                    <span class="max-temp">
+                        <i
+                            class="fa-solid fa-arrow-up"
+                            style="color: #c01c28"
+                        ></i
+                        >22°
+                    </span>
+                    <span class="min-temp"
+                        ><i
+                            class="fa-solid fa-arrow-down"
+                            style="color: #1c71d8"
+                        ></i
+                        >10°</span
+                    >
+                </p>
+            </div>
+            <div class="forecast">
+                <div class="options">
+                    <p>Hourly forecast</p>
+                    <button type="button" class="forecast-options">
+                        72 Hours
+
+                        <i
+                            class="fa-solid fa-caret-up up"
+                            style="color: #333333"
+                        ></i>
+                        <i
+                            class="fa-solid fa-caret-down down"
+                            style="color: #333333"
+                        ></i>
+                    </button>
+                </div>
+                <div class="forecast-content">
+                    <div class="forecast-per-hour">
+                        <p class="hour">06:00</p>
+                        <p>⛈</p>
+                        <div class="graph">.</div>
+                        <p class="rainy">☔ 40%</p>
+                    </div>
+                    <div class="forecast-per-hour">
+                        <p class="hour">07:00</p>
+                        <p>🌤</p>
+                        <div class="graph">.</div>
+                        <p class="rainy">☔ 10%</p>
+                    </div>
+                    <div class="forecast-per-hour">
+                        <p class="hour">08:00</p>
+                        <p>🌤</p>
+                        <div class="graph">.</div>
+                        <p class="rainy">☔ 10%</p>
+                    </div>
+                    <div class="forecast-per-hour">
+                        <p class="hour">09:00</p>
+                        <p>🌥</p>
+                        <div class="graph">.</div>
+                        <p class="rainy">☔ 20%</p>
+                    </div>
+                    <div class="forecast-per-hour">
+                        <p class="hour">10:00</p>
+                        <p>🌞</p>
+                        <div class="graph">.</div>
+                        <p class="rainy">☔ 2%</p>
+                    </div>
+                    <div class="forecast-per-hour"></div>
+                    <div class="forecast-per-hour"></div>
+                    <div class="forecast-per-hour"></div>
+                    <div class="forecast-per-hour"></div>
+                    <div class="forecast-per-hour"></div>
+                </div>
+            </div>
+        </div>
+        <script src="src/app.js"></script>
+    </body>
+</html>
