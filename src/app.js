@@ -88,3 +88,5 @@ fahrenheit.addEventListener('click', convertToF);
 
 let celsius = document.querySelector('#celsius');
 celsius.addEventListener('click', convertToC);
+
+// graph

@@ -9,6 +9,7 @@
             src="https://kit.fontawesome.com/a1b50df935.js"
             crossorigin="anonymous"
         ></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
         <title>Weather</title>
     </head>
     <body>
@@ -40,7 +41,7 @@
                 <div class="current-city">
                     <div class="city">
                         <h1 class="display-city">
-                            <span class="city" id="cityName">Lviv</span>
+                            <span class="city" id="cityName">Edmonton</span>
                             <i
                                 class="fa-solid fa-location-dot"
                                 style="color: #333333"
@@ -53,7 +54,7 @@
 
             <div class="main">
                 <p class="weather-text">Foggy</p>
-                <h2 class="current-temp">14°C</h2>
+                <h2 class="current-temp">21°C</h2>
                 <p class="description">
                     <span class="feels-like"> Feels like: 18°</span>
                     <span class="max-temp">
@@ -74,10 +75,9 @@
             </div>
             <div class="forecast">
                 <div class="options">
-                    <p>Hourly forecast</p>
+                    <p>Hourly forecast:</p>
                     <button type="button" class="forecast-options">
                         72 Hours
-
                         <i
                             class="fa-solid fa-caret-up up"
                             style="color: #333333"
@@ -88,45 +88,65 @@
                         ></i>
                     </button>
                 </div>
-                <div class="forecast-content">
-                    <div class="forecast-per-hour">
-                        <p class="hour">06:00</p>
-                        <p>⛈</p>
-                        <div class="graph">.</div>
-                        <p class="rainy">☔ 40%</p>
+                <div class="foot">
+                    <div class="forecast-content">
+                        <div class="forecast-per-hour">
+                            <p class="card hour1">03:00</p>
+                            <p class="temp-forecast temp1">21°C</p>
+                            <p class="icon-forecast">⛈</p>
+                        </div>
+                        <div class="forecast-per-hour">
+                            <p class="card hour2">04:00</p>
+                            <p class="temp-forecast temp2">19°C</p>
+                            <p class="icon-forecast">⛈</p>
+                        </div>
+                        <div class="forecast-per-hour">
+                            <p class="card hour3">05:00</p>
+                            <p class="temp-forecast temp3">18°C</p>
+                            <p class="icon-forecast">⛈</p>
+                        </div>
+                        <div class="forecast-per-hour">
+                            <p class="card hour4">06:00</p>
+                            <p class="temp-forecast temp4">17°C</p>
+                            <p class="icon-forecast">🌥</p>
+                        </div>
+                        <div class="forecast-per-hour">
+                            <p class="card hour5">07:00</p>
+                            <p class="temp-forecast temp5">18°C</p>
+                            <p class="icon-forecast">🌞</p>
+                        </div>
+                        <div class="forecast-per-hour">
+                            <p class="card hour6">08:00</p>
+                            <p class="temp-forecast temp5">19°C</p>
+                            <p class="icon-forecast">🌞</p>
+                        </div>
+                        <div class="forecast-per-hour">
+                            <p class="card hour7">09:00</p>
+                            <p class="temp-forecast temp5">21°C</p>
+                            <p class="icon-forecast">🌞</p>
+                        </div>
+                        <div class="forecast-per-hour">
+                            <p class="card hour8">10:00</p>
+                            <p class="temp-forecast temp5">22°C</p>
+                            <p class="icon-forecast">🌞</p>
+                        </div>
                     </div>
-                    <div class="forecast-per-hour">
-                        <p class="hour">07:00</p>
-                        <p>🌤</p>
-                        <div class="graph">.</div>
-                        <p class="rainy">☔ 10%</p>
+
+                    <div class="chart-container" style="height: 50px">
+                        <canvas id="forecast-chart"></canvas>
                     </div>
-                    <div class="forecast-per-hour">
-                        <p class="hour">08:00</p>
-                        <p>🌤</p>
-                        <div class="graph">.</div>
-                        <p class="rainy">☔ 10%</p>
-                    </div>
-                    <div class="forecast-per-hour">
-                        <p class="hour">09:00</p>
-                        <p>🌥</p>
-                        <div class="graph">.</div>
+
+                    <div class="forecast-content">
+                        <p class="rainy">☔ 80%</p>
+                        <p class="rainy">☔ 80%</p>
+                        <p class="rainy">☔ 60%</p>
                         <p class="rainy">☔ 20%</p>
+                        <p class="rainy">☔ 10%</p>
                     </div>
-                    <div class="forecast-per-hour">
-                        <p class="hour">10:00</p>
-                        <p>🌞</p>
-                        <div class="graph">.</div>
-                        <p class="rainy">☔ 2%</p>
-                    </div>
-                    <div class="forecast-per-hour"></div>
-                    <div class="forecast-per-hour"></div>
-                    <div class="forecast-per-hour"></div>
-                    <div class="forecast-per-hour"></div>
-                    <div class="forecast-per-hour"></div>
                 </div>
             </div>
         </div>
         <script src="src/app.js"></script>
+        <script src="src/forecast-chart.js"></script>
     </body>
 </html>
